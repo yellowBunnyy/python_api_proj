@@ -9,5 +9,6 @@ print(DB, ADMIN)
 def hello():
     return 'Hello, World!'
 
+
 if __name__ == "__main__":
     my_app.run()

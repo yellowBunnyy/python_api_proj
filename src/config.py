@@ -1,6 +1,4 @@
-from telnetlib import DM
-from dotenv import dotenv_values, load_dotenv
+from dotenv import dotenv_values
 secrets = dotenv_values()
 ADMIN = secrets["ADMIN"]
 DB = secrets["SECRET"]
-
