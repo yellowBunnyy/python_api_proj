@@ -28,7 +28,7 @@ pip install -r requirements.txt # install all needed dependencies
 You can then add your environment variables like this:
 
 ```
-PORT=2137
+PORT=5000
 ```
 
 ## Folder Structure <a name="structure"></a>
