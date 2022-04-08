@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from .config import ADMIN, SQLALCHEMY_URI
+from .config import ADMIN, SQLALCHEMY_DATABASE_URI
 
 
 # init SQLAlchemy so we can use it later in our models
@@ -11,7 +11,7 @@ def create_app():
     my_app = Flask(__name__)
 
     my_app.config["ADMIN"] = ADMIN
-    my_app.config['SQLALCHEMY_URI'] = SQLALCHEMY_URI
+    my_app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 
     db.init_app(my_app)
 
