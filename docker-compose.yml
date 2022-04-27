@@ -1,0 +1,28 @@
+# version: "3.3"
+# services:
+#   flask_api_service:
+#     build: .
+#     # delay api waiting for database
+#     command: > 
+#       sh -c "./wait-for-it.sh -t 5 db:5432  -- echo 'data_base is up!!' && 
+#        uvicorn src.app.main:myapp --reload --host 0.0.0.0 --port 5000 --workers 1" 
+#     ports:
+#       - 5000:5000
+#     environment:
+#       - ENVIRONMENT=dev
+#       - TESTING=0
+#       - DATA_BASE_URL=postgres://root:password@db:5432/my_database
+#     depends_on:
+#       - db
+#     volumes:
+#       - ./src/app:/usr/src/my_app/app
+    
+#   db:
+#     build: 
+#       context: ./src/sql_database
+#       dockerfile: Dockerfile 
+#     expose: 
+#       - 5432
+#     environment:
+#       - POSTGRES_USER=root
+#       - POSTGRES_PASSWORD=password

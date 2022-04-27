@@ -1,0 +1,5 @@
+.gitignore
+env
+# .env
+docker-compose.yml
+src/db.sqlite
