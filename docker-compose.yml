@@ -14,7 +14,7 @@ services:
     # depends_on:
     #   - db
     # volumes:
-    #   - . :/usr/src/my_app
+    #   - . :/usr/my_app
     
 #   db:
 #     build: 
