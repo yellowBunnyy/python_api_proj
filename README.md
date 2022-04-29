@@ -24,7 +24,9 @@ next install docker-compose https://docs.docker.com/compose/install/,
 enter in the console:
 ```
 > docker-compose up
+
 when shows up:
+
 Starting python_api_proj_flask_api_service_1 ... done
 Attaching to python_api_proj_flask_api_service_1
 flask_api_service_1  |  * Serving Flask app 'src' (lazy loading)
@@ -42,7 +44,7 @@ flask_api_service_1  |  * Debugger PIN: 260-536-389
 
 do:
 
-flask_api_service_1  |  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+http://127.0.0.1:5000 pres Ctrl + left mouse click
 ```
 
 You can then add your environment variables like this:
