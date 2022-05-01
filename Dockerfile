@@ -9,12 +9,12 @@ ENV PYTHONUNBUFFERED 1
 ENV FLASK_APP=src
 ENV FLASK_DEBUG=1
 
-
 EXPOSE 5000
 
 # Zanstalowanie apt zależności netcat gcc
 RUN apt-get update \
     && apt-get clean
+RUN apt install sqlite3
 
 # Zainstalowanie zależności pythonowych
 COPY requirements.txt .
@@ -22,5 +22,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Skopiowanie apki
 COPY . .
-RUN python ./create_db.py
-CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0", "--port=5000" ]
+RUN chmod +x run_app.sh
+
+CMD [ "./run_app.sh" ]

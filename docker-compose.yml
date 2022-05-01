@@ -5,19 +5,17 @@ services:
     ports:
       - 5000:5000
     environment:
-      - SECRET=SECRET
+      - SECRET=SECRET1
       - SQLALCHEMY_DATABASE_URI=sqlite:////src/db.sqlite
-    # depends_on:
-    #   - sqlite3
     volumes:
       - .:/usr/my_app
-      - ./src/database/:/src/
+      - ./src/:/src/
     
   sqlite3:
     image: nouchka/sqlite3:latest
     stdin_open: true
     tty: true
     volumes:
-      - ./src/database/:/usr/db/
-      
+      - ./src/:/usr/db/
+
 
