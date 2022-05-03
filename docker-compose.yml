@@ -6,7 +6,7 @@ services:
       - 5000:5000
     environment:
       - SECRET=SECRET1
-      - SQLALCHEMY_DATABASE_URI=sqlite:////src/db.sqlite
+      - SQLALCHEMY_DATABASE_URI=sqlite:////src/database/db.sqlite
     volumes:
       - .:/usr/my_app
       - ./src/:/src/

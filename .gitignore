@@ -1,6 +1,6 @@
 __pycache__/
 env/
 # .env
-src/db.sqlite
+src/database/db.sqlite
 doc_view.ora
 doc_view.ora~
