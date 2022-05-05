@@ -1,4 +1,5 @@
 .gitignore
+data_scraper
 env
 # .env
 docker-compose.yml
