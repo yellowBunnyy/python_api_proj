@@ -56,24 +56,40 @@ PORT=5000
 ## Folder Structure <a name="structure"></a>
 
 ```
+> tree -I "env|__pycache__|*.ora|*.ora~" # exclude files to show tree
+.
 ├── create_db.py
+├── data_scraper
+│   ├── create_csv.ipynb
+│   ├── download_urls.py
+│   ├── extract_data.py
+│   └── requirements.txt
+├── data_sets
+│   ├── cov.csv
+│   ├── influenza.csv
+│   └── prepare_data.ipynb
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs
 │   └── testing.py
 ├── README.md
 ├── requirements.txt
+├── run_app.sh
 └── src
     ├── auth.py
     ├── config.py
-    ├── db.sqlite
+    ├── database
+    │   ├── db.sqlite
+    │   └── __init__.py
     ├── __init__.py
     ├── main.py
     ├── models.py
-    └── templates
-        ├── base.html
-        ├── index.html
-        ├── login.html
-        ├── profile.html
-        └── signup.html
+    ├── templates
+    │   ├── base.html
+    │   ├── index.html
+    │   ├── login.html
+    │   ├── profile.html
+    │   └── signup.html
+    └── utilities
+        └── __init__.py
 ```
