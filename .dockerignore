@@ -3,3 +3,5 @@ data_scraper
 env
 # .env
 docker-compose.yml
+doc_view.ora
+doc_view.ora~
