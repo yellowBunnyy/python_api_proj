@@ -2,6 +2,8 @@ import pandas as pd
 import os
 import plotly.graph_objects as go
 
+print("show PLOTS ||||")
+
 
 input_cov_path = os.path.join(os.getcwd(), "src", "pickledf", "covid.pickle")
 input_influenza_path = os.path.join(os.getcwd(), "src", "pickledf", "influenza.pickle")
@@ -10,6 +12,7 @@ flu_df = pd.read_pickle(input_influenza_path)
 
 
 def cov_plot():
+    print("show covid")
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=cov_df["Date_reported"], y=cov_df["New_cases"], name="infected"))
     fig.add_trace(go.Scatter(x=cov_df["Date_reported"], y=cov_df["New_deaths"], name="deaths"))
@@ -25,6 +28,7 @@ def cov_plot():
 
 
 def flu_plot():
+    print("show flue")
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=flu_df["Date"], y=flu_df["Confirmed"], name="infected"))
     fig.add_trace(go.Scatter(x=flu_df["Date"], y=flu_df["Deaths"], name="deaths"))
@@ -37,6 +41,7 @@ def flu_plot():
                         yaxis_title="People",
                         )
     fig.show()
+
 
 if __name__ == '__main__':
     cov_plot()

@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template
 from flask_login import login_required, current_user
 from . import db
-import show_polts
+
 
 main = Blueprint('main', __name__)
 
@@ -18,8 +18,7 @@ def profile():
 
 
 @main.route('/data')
-# @login_required
+@login_required
 def show_data():
-    show_polts.cov_plot()
-    # show_polts.flu_plot()
+    print("heja")
     return "siema"

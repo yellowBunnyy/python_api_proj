@@ -3,5 +3,9 @@
 {% block content %}
 <h1 class="title">
   Welcome, {{ name }}!
+  <br>
+  <a href="{{ url_for('static', filename='covid.png') }}">Show covid plot</a>.
+  <br>
+  <a href="{{ url_for('static', filename='influenza.png') }}">Show influenza plot</a>.
 </h1>
 {% endblock %}
