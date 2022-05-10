@@ -10,11 +10,25 @@ auth = Blueprint('auth', __name__)
 
 @auth.route('/login')
 def login():
+    """Render login html template
+
+    Returns:
+        str: This will return the rendered template as a string.
+    """
     return render_template('login.html')
 
 
 @auth.route('/login', methods=['POST'])
 def login_post():
+    """Returns a response object (a WSGI application) that, if called,
+    redirects the client to the target location. Supported codes are
+    301, 302, 303, 305, 307, and 308. 300 is not supported because
+    it's not a real redirect and 304 because it's the answer for a
+    request with a request with defined If-Modified-Since headers.
+
+    Returns:
+        Response: Send response
+    """
     email = request.form.get('email')
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
@@ -31,11 +45,20 @@ def login_post():
 
 @auth.route('/signup')
 def signup():
+    """Render singup html template
+
+    Returns:
+        str: This will return the rendered template as a string.
+    """
     return render_template('signup.html')
 
 
 @auth.route('/signup', methods=['POST'])
 def signup_post():
+    """Sing up to service
+     Returns:
+        Response: Send response
+    """
      # code to validate and add user to database goes here
     email = request.form.get('email')
     name = request.form.get('name')
@@ -59,5 +82,10 @@ def signup_post():
 @auth.route('/logout')
 @login_required
 def logout():
+    """Logout clinet
+
+    Returns:
+        Response: Send response
+    """
     logout_user()
     return redirect(url_for('main.index'))

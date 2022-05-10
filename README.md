@@ -67,11 +67,16 @@ PORT=5000
 ├── data_sets
 │   ├── cov.csv
 │   ├── influenza.csv
+│   ├── pickledf
+│   │   ├── covid.pickle
+│   │   ├── influenza.pickle
+│   │   ├── __init__.py
+│   │   └── show_polts.py
 │   └── prepare_data.ipynb
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs
-│   └── testing.py
+│   └── show_doc.sh
 ├── README.md
 ├── requirements.txt
 ├── run_app.sh
@@ -79,17 +84,17 @@ PORT=5000
     ├── auth.py
     ├── config.py
     ├── database
-    │   ├── db.sqlite
-    │   └── __init__.py
+    │   └── db.sqlite
     ├── __init__.py
     ├── main.py
     ├── models.py
-    ├── templates
-    │   ├── base.html
-    │   ├── index.html
-    │   ├── login.html
-    │   ├── profile.html
-    │   └── signup.html
-    └── utilities
-        └── __init__.py
+    ├── static
+    │   ├── covid.png
+    │   └── influenza.png
+    └── templates
+        ├── base.html
+        ├── index.html
+        ├── login.html
+        ├── profile.html
+        └── signup.html
 ```
