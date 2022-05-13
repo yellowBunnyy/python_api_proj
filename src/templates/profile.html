@@ -1,11 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Welcome, {{ name }}!
-  <br>
-  <a href="{{ url_for('static', filename='covid.png') }}">Show covid plot</a>.
-  <br>
-  <a href="{{ url_for('static', filename='influenza.png') }}">Show influenza plot</a>.
-</h1>
+<body>
+  <h1 style="color:white;font-size:40px;">COVID</h1>
+  <div id='covid' class='chart'”></div>
+</body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{covid | safe}};
+  Plotly.plot('covid', graphs,{});
+</script>
+<body>
+  <h1 style="color:white;font-size:40px;">INFLUENZA</h1>
+  <div id='flu' class='chart'”></div>
+</body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{influenza | safe}};
+  Plotly.plot('flu', graphs,{});
+</script>
 {% endblock %}
