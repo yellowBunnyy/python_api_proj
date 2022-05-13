@@ -10,9 +10,6 @@ input_influenza_path = os.path.join(os.getcwd(), "data_sets", "pickledf", "influ
 cov_df = pd.read_pickle(input_cov_path)
 flu_df = pd.read_pickle(input_influenza_path)
 
-# fig.add_trace(go.Scatter(x=pol_cov_month["Date_reported"], y=pol_cov_month["New_cases"], name="infected", mode="lines+markers+text", text=pol_cov_month["New_cases"], textposition="top left"))
-# fig.add_trace(go.Scatter(x=pol_cov_month["Date_reported"], y=pol_cov_month["New_deaths"], name="deaths", mode="lines+markers+text", text=pol_cov_month["New_deaths"], textposition="bottom center"))
-
 
 def cov_plot():
     print("show covid")
